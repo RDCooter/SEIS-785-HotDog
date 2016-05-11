@@ -385,19 +385,19 @@ int evaluateHeatIndex(double& pHeatIndex) {
      **/
     if ( pHeatIndex >= (double)130.0 ) { // HeatStroke = Highly likely
         alertCondition = 1;             // Send the ALERT warning.
-        sprintf(alertClassification, "ExtremelyHot[%.4f]", pHeatIndex); 
+        sprintf(alertClassification, "ExtremelyHot[%.4f F]", pHeatIndex); 
     } else if ( pHeatIndex >= (double)105.0 ) { // HeatStroke = Likely/Possible
         alertCondition = 1;             // Send the ALERT warning.
-        sprintf(alertClassification, "VeryHot[%.4f]", pHeatIndex); 
+        sprintf(alertClassification, "VeryHot[%.4f F]", pHeatIndex); 
     } else if ( pHeatIndex >= (double)90.0 ) { // HeatExhaustion = Possible
         alertCondition = 1;             // Send the ALERT warning.
-        sprintf(alertClassification, "Hot[%.4f]", pHeatIndex); 
+        sprintf(alertClassification, "Hot[%.4f F]", pHeatIndex); 
     } else if ( pHeatIndex >= (double)80.0 ) { // Fatigue = Possible
         alertCondition = 0;             // Reset the ALERT condition.
-        sprintf(alertClassification, "VeryWarm[%.4f]", pHeatIndex); 
+        sprintf(alertClassification, "VeryWarm[%.4f F]", pHeatIndex); 
     } else {
         alertCondition = 0;             // Reset the ALERT condition.
-        sprintf(alertClassification, "Moderate[%.4f]", pHeatIndex); 
+        sprintf(alertClassification, "Moderate[%.4f F]", pHeatIndex); 
     }
     
     /**
