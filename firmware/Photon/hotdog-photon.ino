@@ -1,6 +1,6 @@
 //============================================================================
 //
-// Name: HotDog.ino
+// Name: HotDog-Proton.ino
 //
 // Author:  Robert Driesch  --  UST Graduate Program
 //
@@ -351,18 +351,26 @@ double calculateHeatIndex(double& pTemperature, double& pHumidity) {
     double heatIndex;                   // Store the Heat Index result
 
     // Define constants to complete the Heat Index function calculations.
-    double C1 = -42.379;
-    double C2 = 2.04901523;
-    double C3 = 10.14333127;
-    double C4 = -0.22475541;
-    double C5 = -.00683783;
-    double C6 = -5.481717E-2;
-    double C7 = 1.22874E-3;
-    double C8 = 8.5282E-4;
-    double C9 = -1.99E-6;
+    double xC1 = -42.379;
+    double xC2 = 2.04901523;
+    double xC3 = 10.14333127;
+    double xC4 = -0.22475541;
+    double xC5 = -.00683783;
+    double xC6 = -5.481717E-2;
+    double xC7 = 1.22874E-3;
+    double xC8 = 8.5282E-4;
+    double xC9 = -1.99E-6;
 
     // Actual function of Calculating Heat Index
-    heatIndex = C1 + (C2 * T) + (C3 * R) + (C4 * T * R) + (C5 * T2) + (C6 * R2) + (C7 * T2 * R) + (C8 * T * R2) + (C9 * T2 * R2);
+    heatIndex = xC1 
+                + (xC2 * T) 
+                + (xC3 * R) 
+                + (xC4 * T * R) 
+                + (xC5 * T2) 
+                + (xC6 * R2) 
+                + (xC7 * T2 * R) 
+                + (xC8 * T * R2) 
+                + (xC9 * T2 * R2);
     return heatIndex;
 }
 
